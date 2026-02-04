@@ -12,22 +12,15 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-export const metadata: Metadata = {
-  title: "Keom - Logistcs Company",
-  description: "Logistcs Company",
-};
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <title>Keom - Logistics</title>
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
         {children}
       </body>
