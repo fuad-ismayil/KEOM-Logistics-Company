@@ -24,8 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
 select option {
   background-color: #ff7d44;
   color: #ffffff;
 }
 
+.reveal-mask {
+  clip-path: inset(0 0 0 0);
+  will-change: clip-path;
+}
+
+.reveal-mask.animate {
+  clip-path: inset(0 100% 0 0);
+  animation: reveal-mask 1s cubic-bezier(.55, .055, .675, .19) forwards;
+}
+
+@keyframes reveal-mask {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
