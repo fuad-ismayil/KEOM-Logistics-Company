@@ -25,10 +25,10 @@ export default function AboutArea() {
                             </div>
                         </div>
                     </div>
-                    <div className=" lg:text-left lg:pl-[20px]">
+                    <div className=" lg:text-left lg:pl-[20px] flex flex-col">
                         <h2 className="text-[40px] text-center lg:text-left lg:text-[60px] break-keep whitespace-normal leading-[1.2] font-[700]">
                             <WavyText text="Shipping service" className="text-[#9AA9AD]" />
-                            <WavyText text="around the" className="text-[#003b49]" /><WavyText text=" corners" className="text-[#003b49]" delay={0.4} />
+                            <div><WavyText text="around the" className="text-[#003b49]" /><WavyText text=" corners" className="text-[#003b49]" delay={0.4} /></div>
                         </h2>
                         <div className="mt-4 lg:mt-[22px] flex items-center justify-center lg:justify-start gap-4 lg:gap-6">
                             <span className="text-[14px] font-bold uppercase tracking-[0.08em] text-[#FF7D44]">since from 1990</span>
