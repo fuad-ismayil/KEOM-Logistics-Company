@@ -1,6 +1,5 @@
 import { Globe, ChevronDown } from "lucide-react";
 import WavyText from "./WavyText";
-
 export default function Introduction() {
   const inputContainer = "py-[7px] mb-[25px] lg:mb-0 lg:py-[20px] lg:px-[30px] px-[12px]";
   const fieldWrapper = "flex items-center border-b border-white/20 pb-3 focus-within:border-white transition-colors duration-300";
@@ -43,6 +42,4 @@ export default function Introduction() {
           </div>
         </form>
       </div>
-    </section>
-  );
-}
+    </section>);}

@@ -13,8 +13,7 @@ const DEFAULT_ITEMS: GalleryItem[] = [
     { imageSrc: "/images/gallery/gallery-03.jpg", iconSrc: "/images/gallery/crown.png", tag: "freight", title: "King Co. thing transport", },
     { imageSrc: "/images/gallery/services-img1.jpg", iconSrc: "/images/gallery/cnn.png", tag: "transport", title: "Aoliox office thing transport", },
     { imageSrc: "/images/gallery/services-img3.jpg", iconSrc: "/images/gallery/crown.png", tag: "transport", title: "Aoliox office thing transport", },
-    { imageSrc: "/images/gallery/services-img5.jpg", iconSrc: "/images/gallery/cnn.png", tag: "transport", title: "Aoliox office thing transport", },
-];
+    { imageSrc: "/images/gallery/services-img5.jpg", iconSrc: "/images/gallery/cnn.png", tag: "transport", title: "Aoliox office thing transport", },];
 export default function GalleryArea({ items = DEFAULT_ITEMS, phoneLabel = "+(123) 456 789 00", phoneHref = "tel:+12345678900", }: { items?: GalleryItem[]; phoneLabel?: string; phoneHref?: string; }) {
     const [active, setActive] = useState(0);
     const list = useMemo(() => items, [items]);

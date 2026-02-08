@@ -1,18 +1,15 @@
 "use client";
-
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import { FaTruck, FaClock, FaSackDollar, FaHeadphonesSimple, FaArrowRightLong } from "react-icons/fa6";
 import "swiper/css";
-
 export default function FeatureSlider() {
     const features = [
         { id: 1, icon: <FaTruck className="text-[#ff7d44]" size={16} />, title: "TRACK SHIPMENT", link: "/contact" },
         { id: 2, icon: <FaClock className="text-[#ff7d44]" size={16} />, title: "ON-TIME DELIVERY", link: "/contact" },
         { id: 3, icon: <FaSackDollar className="text-[#ff7d44]" size={16} />, title: "RELIABLE SERVICE FEE", link: "/contact" },
-        { id: 4, icon: <FaHeadphonesSimple className="text-[#ff7d44]" size={16} />, title: "24/7 ONLINE SUPPORT", link: "/contact" },
-    ];
+        { id: 4, icon: <FaHeadphonesSimple className="text-[#ff7d44]" size={16} />, title: "24/7 ONLINE SUPPORT", link: "/contact" },];
     return (
         <div className="w-full bg-white border-b border-gray-100">
             <Swiper modules={[Autoplay]} spaceBetween={0} speed={2000} slidesPerView={1} loop={true} autoplay={{ delay: 1500, disableOnInteraction: false }} breakpoints={{ 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 4 }, }} className="w-full">
@@ -27,8 +24,6 @@ export default function FeatureSlider() {
                                 <div className="text-gray-300 group-hover:text-[#ff7d44] transition-colors duration-300"><FaArrowRightLong size={16} /></div>
                             </div>
                         </Link>
-                    </SwiperSlide>
-                ))}
+                    </SwiperSlide>))}
             </Swiper>
-        </div>
-);}
+        </div>);}

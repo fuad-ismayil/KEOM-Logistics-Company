@@ -38,7 +38,7 @@ export default function HowItWork({ items = DEFAULT_ITEMS, }: { items?: HowItWor
                             </span>
                             <div className="h-px flex-1 bg-gradient-to-r from-[#003b49] to-[#FF7D44] hidden lg:block" />
                         </div>
-                    </div>only
+                    </div>
                 </Fade>
                 <div className="mt-[80px] hidden lg:grid grid-cols-3 gap-8">
                     {items.map((item, idx) => (<Fade key={item.step} direction="left" delay={idx * 120} triggerOnce><HowItWorkCard item={item} /></Fade>))}

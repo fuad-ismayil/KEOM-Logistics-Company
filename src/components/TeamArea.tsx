@@ -23,27 +23,19 @@ function TeamCard({ member }: { member: TeamMember }) {
                     <ul className="flex items-center gap-[14px]">
                         {member.socials.pinterest && (
                             <li>
-                                <a href={member.socials.pinterest} aria-label="Pinterest" className="text-white/70 transition-colors hover:text-[#FF7D44]">
-                                    <FaPinterestP className="text-[14px]" />
-                                </a>
+                                <a href={member.socials.pinterest} aria-label="Pinterest" className="text-white/70 transition-colors hover:text-[#FF7D44]"><FaPinterestP className="text-[14px]" /></a>
                             </li>)}
                         {member.socials.instagram && (
                             <li>
-                                <a href={member.socials.instagram} aria-label="Instagram" className="text-white/70 transition-colors hover:text-[#FF7D44]">
-                                    <FaInstagram className="text-[14px]" />
-                                </a>
+                                <a href={member.socials.instagram} aria-label="Instagram" className="text-white/70 transition-colors hover:text-[#FF7D44]"><FaInstagram className="text-[14px]" /></a>
                             </li>)}
                         {member.socials.twitter && (
                             <li>
-                                <a href={member.socials.twitter} aria-label="X" className="text-white/70 transition-colors hover:text-[#FF7D44]">
-                                    <FaXTwitter className="text-[14px]" />
-                                </a>
+                                <a href={member.socials.twitter} aria-label="X" className="text-white/70 transition-colors hover:text-[#FF7D44]"><FaXTwitter className="text-[14px]" /></a>
                             </li>)}
                         {member.socials.facebook && (
                             <li>
-                                <a href={member.socials.facebook} aria-label="Facebook" className="text-white/70 transition-colors hover:text-[#FF7D44]">
-                                    <FaFacebookF className="text-[14px]" />
-                                </a>
+                                <a href={member.socials.facebook} aria-label="Facebook" className="text-white/70 transition-colors hover:text-[#FF7D44]"><FaFacebookF className="text-[14px]" /></a>
                             </li>)}
                     </ul>
                     <div className="mt-auto">
@@ -71,43 +63,24 @@ export default function TeamArea() {
                         <div className="mt-[10px] text-[#003B49] text-[40px] leading-[1.2] font-bold lg:text-[60px]">
                             <WavyText text="ready to take " delay={0.2} /><WavyText text="challenges" delay={0.4} />
                         </div>
-
                         <div className="mt-[18px] flex items-center justify-center">
                             <div className="h-px w-full max-w-[585px] bg-gradient-to-r from-white to-[#FF7D44]" />
-                            <span className="mx-[14px] text-[#FF7D44] text-[14px] font-[700] uppercase">
-                                our team
-                            </span>
+                            <span className="mx-[14px] text-[#FF7D44] text-[14px] font-[700] uppercase">our team</span>
                             <div className="h-px w-full max-w-[585px] bg-gradient-to-l from-white to-[#FF7D44]" />
                         </div>
                     </div>
                 </Fade>
                 <div className="mt-[48px] hidden lg:grid grid-cols-3 gap-x-[24px]">
-                    {TEAM.map((m, i) => (
-                        <Fade key={m.name} direction="left" triggerOnce duration={900} delay={i * 120}>
-                            <TeamCard member={m} />
-                        </Fade>
-                    ))}
+                    {TEAM.map((m, i) => (<Fade key={m.name} direction="left" triggerOnce duration={900} delay={i * 120}><TeamCard member={m} /></Fade>))}
                 </div>
-
-                {/* Tablet + Mobile (swiper, animated slides) */}
                 <div className="mt-[48px] lg:hidden">
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={24}
-                        breakpoints={{
-                            768: { slidesPerView: 2 },
-                        }}
-                    >
+                        breakpoints={{768: { slidesPerView: 2 },}}>
                         {TEAM.map((m, i) => (
-                            <SwiperSlide key={m.name}>
-                                <Fade direction="left" triggerOnce duration={900} delay={i * 120}>
-                                    <TeamCard member={m} />
-                                </Fade>
-                            </SwiperSlide>
-                        ))}
+                            <SwiperSlide key={m.name}><Fade direction="left" triggerOnce duration={900} delay={i * 120}><TeamCard member={m} /></Fade></SwiperSlide>))}
                     </Swiper>
                 </div>
             </div>
-        </section>
-    );
-}
+        </section>);}

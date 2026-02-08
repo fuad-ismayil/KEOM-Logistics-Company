@@ -45,13 +45,9 @@ export default function AboutArea() {
                             meet your specific needs and drive your business forward.
                         </p>
                         <div className="mt-6 lg:mt-[30px]">
-                            <a href="/about" className="inline-flex h-[50px] w-[190px] items-center justify-center bg-[#FF7D44] text-[13px] font-bold uppercase text-white transition hover:brightness-95">
-                                Discover More
-                            </a>
+                            <a href="/about" className="inline-flex h-[50px] w-[190px] items-center justify-center bg-[#FF7D44] text-[13px] font-bold uppercase text-white transition hover:brightness-95">Discover More</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    );
-}
+        </section>);}
