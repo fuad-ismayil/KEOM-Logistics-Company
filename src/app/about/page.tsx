@@ -1,4 +1,4 @@
-import AboutPageIntro from "@/components/about/AboutPageIntro";
+import PageIntro from "@/components/PageIntro";
 import AboutArea from "@/components/AboutArea";
 import HowItWorks from "@/components/HowItWorks";
 import TestimonialArea from "@/components/TestimonialArea";
@@ -7,7 +7,7 @@ import BookingArea from "@/components/BookingArea";
 export default function About() {
     return (
         <>
-            <AboutPageIntro />
+            <PageIntro title="About Us" link="/about" />
             <AboutArea />
             <HowItWorks />
             <TestimonialArea />

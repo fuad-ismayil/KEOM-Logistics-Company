@@ -1,12 +1,12 @@
 import FaqArea from "@/components/faq/FaqArea";
-import FaqPageIntro from "@/components/faq/FaqPageIntro";
+import PageIntro from "@/components/PageIntro";
 import BrandArea from "@/components/faq/BrandArea";
 
 
 export default function Page() {
     return (
         <>
-            <FaqPageIntro />
+            <PageIntro title="FAQ" link="/faq" />
             <FaqArea />
             <BrandArea />
         </>
