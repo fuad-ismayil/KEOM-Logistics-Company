@@ -57,7 +57,7 @@ const jsonLd = {
   name: "Keom Logistics",
   description:
     "Reliable road, air, and ocean freight services for businesses worldwide.",
-  url: "https://keom.netlify.app",
+  url: "https://keom.vercel.app",
   serviceType: ["Road Freight", "Air Freight", "Ocean Freight"],
 };
 
