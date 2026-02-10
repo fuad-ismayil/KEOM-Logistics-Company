@@ -49,3 +49,7 @@ select option {
     clip-path: inset(0 0 0 0);
   }
 }
+html,
+body {
+  background: #fff;
+}
