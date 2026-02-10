@@ -5,7 +5,6 @@ import BlogCard, { type BlogPost } from "@/components/blog/BlogCard";
 import { FaXTwitter, FaPinterestP, FaFacebookF, FaInstagram, FaWordpress, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import Link from "next/link";
 
-const API_KEY = process.env.NEXT_PUBLIC_GNEWS_API_KEY;
 const ACCENT = "#ea7944";
 
 export default function InnerBlog() {
@@ -31,10 +30,10 @@ export default function InnerBlog() {
     const fetchNews = async () => {
       setLoading(true);
       try {
-        let url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&apikey=${API_KEY}`;
+        let url = `/api/news?category=${category}`;
         
         if (searchQuery) {
-          url = `https://gnews.io/api/v4/search?q=${searchQuery}&lang=en&apikey=${API_KEY}`;
+          url = `/api/news?search=${searchQuery}`;
         }
 
         const response = await axios.get(url);
