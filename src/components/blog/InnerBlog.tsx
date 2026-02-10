@@ -5,7 +5,7 @@ import BlogCard, { type BlogPost } from "@/components/blog/BlogCard";
 import { FaXTwitter, FaPinterestP, FaFacebookF, FaInstagram, FaWordpress, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import Link from "next/link";
 
-const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_GNEWS_API_KEY;
 const ACCENT = "#ea7944";
 
 export default function InnerBlog() {
@@ -31,22 +31,23 @@ export default function InnerBlog() {
     const fetchNews = async () => {
       setLoading(true);
       try {
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`;
+        let url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&apikey=${API_KEY}`;
+        
         if (searchQuery) {
-          url = `https://newsapi.org/v2/everything?q=${searchQuery}&apiKey=${API_KEY}`;
+          url = `https://gnews.io/api/v4/search?q=${searchQuery}&lang=en&apikey=${API_KEY}`;
         }
 
         const response = await axios.get(url);
 
         const formattedData: BlogPost[] = response.data.articles
-          .filter((article: any) => article.urlToImage)
+          .filter((article: any) => article.image)
           .map((article: any, index: number) => ({
             id: index.toString(),
             date: new Date(article.publishedAt).toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' }),
             title: article.title,
             excerpt: article.description || "Click to read more about this news...",
             href: article.url,
-            imageSrc: article.urlToImage,
+            imageSrc: article.image,
             isVideo: false,
           }));
 
