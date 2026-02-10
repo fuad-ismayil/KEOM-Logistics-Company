@@ -5,7 +5,7 @@ import BlogCard, { type BlogPost } from "@/components/blog/BlogCard";
 import { FaXTwitter, FaPinterestP, FaFacebookF, FaInstagram, FaWordpress, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import Link from "next/link";
 
-const API_KEY = "e1bc6a540b1e4cfd9c03321db381d887";
+const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
 const ACCENT = "#ea7944";
 
 export default function InnerBlog() {
