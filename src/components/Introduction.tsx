@@ -19,9 +19,9 @@ export default function Introduction() {
       <div className="lg:w-[58%] flex bg-[#ffffff0f] mt-[50px] lg:mb-[120px] mb-[35px] p-[30px] lg:p-0">
         <form className="w-full grid grid-cols-1 lg:grid-cols-3">
           <div className={`${inputContainer} lg:pl-[30px]`}>
-            <div className={fieldWrapper}>
-              <input type="text" placeholder="Shipment id" required className={`${inputBase} cursor-text`} />
-              <Globe className="text-white opacity-90 pointer-events-none shrink-0" size={20} strokeWidth={1.5} />
+            <div className={`${fieldWrapper} relative`}>
+              <input type="text" placeholder="Shipment id" required className={`${inputBase} pr-12 cursor-text`} />
+              <Globe className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white/90" size={20} strokeWidth={1.5} aria-hidden="true" />
             </div>
           </div>
           <div className={inputContainer}>

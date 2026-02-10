@@ -5,33 +5,27 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 type Service = {id: string;iconSrc: string;style: string;title: string;href: string;description: string;};
 const SERVICES: Service[] = [
-  {
-    id: "flexible-shipment",
+  { id: "flexible-shipment",
     iconSrc: "/images/freightservices/fs1.png",
     style: "pr-[85px] mt-[50px]",
     title: "Flexible Shipment",
     href: "/single-service",
     description:
-      "Thanks to our cutting edge technological infrastructure & skilled team, including specialists in supply.",
-  },
-  {
-    id: "ship-your-product",
+      "Thanks to our cutting edge technological infrastructure & skilled team, including specialists in supply.",},
+  { id: "ship-your-product",
     iconSrc: "/images/freightservices/fs2.png",
     style: "px-[50px] mt-[50px]",
     title: "Ship Your Product",
     href: "/single-service",
     description:
-      "Thanks to our cutting edge technological infrastructure & skilled team, including specialists in supply.",
-  },
-  {
-    id: "track-shipment",
+      "Thanks to our cutting edge technological infrastructure & skilled team, including specialists in supply.",},
+  { id: "track-shipment",
     iconSrc: "/images/freightservices/fs3.png",
     style: "px-[50px] mt-[50px]",
     title: "Track Shipment",
     href: "/single-service",
     description:
-      "Thanks to our cutting edge technological infrastructure & skilled team, including specialists in supply.",
-  },];
+      "Thanks to our cutting edge technological infrastructure & skilled team, including specialists in supply.",},];
 export default function ServicesShowcase() {
   return (
     <section className="relative bg-white pb-[80px] pt-[80px] md:pt-[90px] lg:pb-[90px] lg:pt-[110px]">
@@ -44,7 +38,7 @@ export default function ServicesShowcase() {
           </h2>
           <div className="flex items-center gap-6 text-center lg:text-left">
             <span className="text-[14px] text-center lg:text-left w-full font-semibold uppercase tracking-wide text-[#FF7D44]">WHAT I DO</span>
-            <img src="/images/freightservices/line.svg" alt="line" className="ml-auto hidden w-[92%] lg:block "/>
+            <img src="/images/freightservices/line.svg" alt="line" className="ml-auto hidden w-[90%] lg:block "/>
           </div>
         </div>
         <Swiper

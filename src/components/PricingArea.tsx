@@ -7,8 +7,7 @@ import WavyText from "./WavyText";
 import { AnimatePresence, motion } from "framer-motion";
 type PricingItem = { title: string; price: string; leftBullets: string[]; rightBullets: string[]; };
 const ITEMS: PricingItem[] = [
-    {
-        title: "Road Freight",
+    {   title: "Road Freight",
         price: "$199",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -83,7 +82,7 @@ export default function PricingArea() {
                                 <div id={panelId} role="region" aria-labelledby={buttonId} className={["grid transition-[grid-template-rows,opacity] duration-300 ease-out",isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",].join(" ")}>
                                     <div className="overflow-hidden">
                                         <div className="pt-[26px] pb-[44px]">
-                                            <div className={["grid items-stretch gap-y-[28px]","lg:grid-cols-[408px_360px_1fr] lg:gap-x-[80px]",].join(" ")}>
+                                            <div className={["grid items-stretch gap-y-[28px]","lg:grid-cols-[408px_360px_1fr] lg:gap-x-[50px]",].join(" ")}>
                                                 <div className="min-w-0">
                                                     <AnimatePresence mode="wait">
                                                         {isOpen && (
