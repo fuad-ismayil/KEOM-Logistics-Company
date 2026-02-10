@@ -5,7 +5,7 @@ export default function Introduction() {
   const fieldWrapper = "flex items-center border-b border-white/20 pb-3 focus-within:border-white transition-colors duration-300";
   const inputBase = "flex-1 bg-transparent text-white text-[16px] outline-none placeholder-gray-400 font-normal appearance-none cursor-pointer";
   return (
-    <section className="overflow-hidden introduction min-h-screen bg-fixed -z-10 flex w-full flex-col bg-[url('/images/introduction/bg.jpg')] bg-cover bg-center px-[24px] lg:px-[10.5%]">
+    <section className="overflow-hidden introduction min-h-screen bg-scroll lg:bg-fixed -z-10 flex w-full flex-col bg-[url('/images/introduction/bg.jpg')] bg-cover bg-center px-[24px] lg:px-[10.5%]">
       <div className="flex pt-[360px] lg:pt-[330px] w-[70%] items-center gap-[10px] mb-[50px]">
         <div className="h-[100px] lg:h-[50px] w-[2px] bg-[#ff7d44]" />
         <h5 className="text-[16px] leading-[26px] lg:text-[16px] font-normal text-[#fff] pl-[7px]">
