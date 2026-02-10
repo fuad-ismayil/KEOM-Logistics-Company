@@ -6,4 +6,5 @@ export default function FreightServices() {
     <section className="bg-[#fff]">
       <FeatureBoxs />
       <ServicesSection />
-    </section>);}
+    </section>);
+}

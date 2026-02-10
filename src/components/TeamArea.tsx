@@ -50,7 +50,8 @@ function TeamCard({ member }: { member: TeamMember }) {
                     </div>
                 </div>
             </div>
-        </div>);}
+        </div>);
+}
 export default function TeamArea() {
     return (
         <section className="relative overflow-hidden bg-white pt-[120px] pb-[90px]">
@@ -77,10 +78,11 @@ export default function TeamArea() {
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={24}
-                        breakpoints={{768: { slidesPerView: 2 },}}>
+                        breakpoints={{ 768: { slidesPerView: 2 }, }}>
                         {TEAM.map((m, i) => (
                             <SwiperSlide key={m.name}><Fade direction="left" triggerOnce duration={900} delay={i * 120}><TeamCard member={m} /></Fade></SwiperSlide>))}
                     </Swiper>
                 </div>
             </div>
-        </section>);}
+        </section>);
+}

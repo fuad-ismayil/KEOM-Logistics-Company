@@ -6,7 +6,8 @@ import { CiCircleCheck } from "react-icons/ci";
 import { AnimatePresence, motion } from "framer-motion";
 type PricingItem = { title: string; price: string; leftBullets: string[]; rightBullets: string[]; };
 const ITEMS: PricingItem[] = [
-    {   title: "Road Freight",
+    {
+        title: "Road Freight",
         price: "$199",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -14,8 +15,10 @@ const ITEMS: PricingItem[] = [
             "Volume Limit: Up to 10 cubic meters",
             "Door-to-door delivery",
             "Basic insurance coverage",],
-        rightBullets: ["Online shipment tracking", "Customer support"],},
-    {   title: "Ship Freight",
+        rightBullets: ["Online shipment tracking", "Customer support"],
+    },
+    {
+        title: "Ship Freight",
         price: "$299",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -23,8 +26,10 @@ const ITEMS: PricingItem[] = [
             "Volume Limit: Up to 10 cubic meters",
             "Door-to-door delivery",
             "Basic insurance coverage",],
-        rightBullets: ["Online shipment tracking", "Customer support"],},
-    {   title: "Airplane Freight",
+        rightBullets: ["Online shipment tracking", "Customer support"],
+    },
+    {
+        title: "Airplane Freight",
         price: "$399",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -32,7 +37,8 @@ const ITEMS: PricingItem[] = [
             "Volume Limit: Up to 10 cubic meters",
             "Door-to-door delivery",
             "Basic insurance coverage",],
-        rightBullets: ["Online shipment tracking", "Customer support"],},];
+        rightBullets: ["Online shipment tracking", "Customer support"],
+    },];
 function PlusCircle({ active }: { active: boolean }) {
     return (
         <span className={["grid h-[40px] w-[40px] place-items-center rounded-full", active ? "border border-[#ff7d44] bg-transparent" : "bg-[#c4d2d5]",].join(" ")} aria-hidden="true">
@@ -40,13 +46,15 @@ function PlusCircle({ active }: { active: boolean }) {
                 <span className={["absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2", active ? "bg-[#ff7d44]" : "bg-[#0a3b44]",].join(" ")} />
                 <span className={["absolute left-0 top-1/2 h-[2px] w-full -translate-y-1/2", active ? "bg-[#ff7d44]" : "bg-[#0a3b44]",].join(" ")} />
             </span>
-        </span>);}
+        </span>);
+}
 function CheckBullet({ text }: { text: string }) {
     return (
         <li className="flex items-start gap-[14px] text-[20px] leading-[28px] text-[#0a3b44]">
             <CiCircleCheck size={30} color="#ff7d44" className="text-[25px]" />
             <span>{text}</span>
-        </li>);}
+        </li>);
+}
 export default function PricingArea() {
     const uid = useId();
     const [openIndex, setOpenIndex] = useState<number>(1);
@@ -94,7 +102,9 @@ export default function PricingArea() {
                                         </div>
                                         <div className="h-[2px] bg-[#8aa6ae]" /></div>
                                 </div>
-                            </div>);})}
+                            </div>);
+                    })}
                 </div>
             </div>
-        </section>);}
+        </section>);
+}

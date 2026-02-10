@@ -64,4 +64,5 @@ export default function GalleryArea({ items = DEFAULT_ITEMS, phoneLabel = "+(123
                         </div>
                     </div>
                 </div>)}
-        </section>);}
+        </section>);
+}

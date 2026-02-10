@@ -1,27 +1,33 @@
 import BlogCard, { type BlogPost } from "@/components/blog/BlogCard";
-import {FaXTwitter, FaPinterestP, FaFacebookF, FaInstagram, FaWordpress, FaAnglesLeft, FaAnglesRight,} from "react-icons/fa6";
+import { FaXTwitter, FaPinterestP, FaFacebookF, FaInstagram, FaWordpress, FaAnglesLeft, FaAnglesRight, } from "react-icons/fa6";
 import Link from "next/link";
 const posts: BlogPost[] = [
-  { id: "1",
+  {
+    id: "1",
     date: "24th March 2025",
     title: "Lorem ipsum dolor sit amet, consectetur cing elit, sed do eiusmod tempor.",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse.",
     href: "/blog-details",
-    imageSrc: "/images/blogarea/inner_b1.jpg",},
-  { id: "2",
+    imageSrc: "/images/blogarea/inner_b1.jpg",
+  },
+  {
+    id: "2",
     date: "24th March 2025",
     title: "There are many variations passages of like consectetur lorem ipsum available.",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse.",
     href: "/blog-details",
     imageSrc: "/images/blogarea/inner_b2.jpg",
     isVideo: true,
-    videoHref: "https://www.youtube.com/watch?v=gyGsPlt06bo",},
-  { id: "3",
+    videoHref: "https://www.youtube.com/watch?v=gyGsPlt06bo",
+  },
+  {
+    id: "3",
     date: "24th March 2025",
     title: "I must explain to you how all this mistaken idea of denouncing pleasure.",
     excerpt: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse.",
     href: "/blog-details",
-    imageSrc: "/images/blogarea/inner_b3.jpg",},];
+    imageSrc: "/images/blogarea/inner_b3.jpg",
+  },];
 const categories = [
   { name: "Branding", count: 4 },
   { name: "Corporat", count: 3 },
@@ -94,14 +100,16 @@ export default function InnerBlog() {
           </aside>
         </div>
       </div>
-    </section>);}
+    </section>);
+}
 function Widget({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="bg-[#f5f5f5] p-[40px]">
       <h3 className="text-[22px] font-semibold text-[#223645] mb-[30px]">{title}</h3>
       <div className="mt-[16px]">{children}</div>
-    </section>);}
-function SocialIcon({href,label,children}: {href: string;label: string;children: React.ReactNode;}) {return <a href={href} aria-label={label} className="grid h-[34px] w-[34px] place-items-center rounded-full border border-[#d5dde3] bg-white text-[#6f7b86]">{children}</a>;}
+    </section>);
+}
+function SocialIcon({ href, label, children }: { href: string; label: string; children: React.ReactNode; }) { return <a href={href} aria-label={label} className="grid h-[34px] w-[34px] place-items-center rounded-full border border-[#d5dde3] bg-white text-[#6f7b86]">{children}</a>; }
 function Pagination() {
   const items: Array<"prev" | "next" | number | "..."> = ["prev", 1, 2, 3, "...", 10, "next"];
   const active = 1;
@@ -121,7 +129,9 @@ function Pagination() {
                 <a href="#" className={cls} aria-current={isActive ? "page" : undefined}>
                   {it === "prev" ? (<FaAnglesLeft className="h-[16px] w-[16px]" />) : it === "next" ? (<FaAnglesRight className="h-[16px] w-[16px]" />) : (it)}
                 </a>
-              </li>);})}
+              </li>);
+          })}
         </ul>
       </nav>
-    </div>);}
+    </div>);
+}

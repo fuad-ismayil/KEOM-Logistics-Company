@@ -33,4 +33,5 @@ export default function BookingArea() {
           </div>
         </div>
       </div>
-    </section>);}
+    </section>);
+}

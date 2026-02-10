@@ -58,4 +58,5 @@ export default function Footer() {
           Copyright & Design By <Link href="/" className="font-bold text-[#003B49]">©Zcubedesign</Link> Created by <Link href="https://github.com/fuad-ismayil" target="_blank" className="font-bold text-[#003B49]">©fuad-ismayil</Link> - {new Date().getFullYear()}. All Rights Reserved
         </div>
       </div>
-    </footer>);}
+    </footer>);
+}

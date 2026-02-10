@@ -34,8 +34,6 @@ export default function WavyText({ text, className = "", delay = 0 }: WavyTextPr
       {text.split("").map((char, i) => (
         <span key={i} className="char inline-block">
           {char === " " ? "\u00A0" : char}
-        </span>
-      ))}
-    </span>
-  );
+        </span>))}
+    </span>);
 }

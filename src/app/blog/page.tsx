@@ -5,7 +5,6 @@ export default function Blog() {
         <>
             <PageIntro title="Blog" link="/blog" />
             <InnerBlog />
-
         </>
     );
 }

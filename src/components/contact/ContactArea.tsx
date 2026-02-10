@@ -54,4 +54,5 @@ export default function ContactArea() {
                 />
             </div>
         </div>
-</>);}
+    </>);
+}

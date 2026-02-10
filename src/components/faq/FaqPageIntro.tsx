@@ -8,6 +8,5 @@ export default function FaqPageIntro() {
                 <span className="text-white text-[16px] font-[700]">|</span>
                 <Link href="/faq" className="text-white text-[16px] font-[700]">FAQ</Link>
             </div>
-        </section>
-    );
+        </section>);
 }

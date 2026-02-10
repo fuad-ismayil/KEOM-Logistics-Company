@@ -9,13 +9,14 @@ export type BlogPost = {
   href: string;
   imageSrc: string;
   isVideo?: boolean;
-  videoHref?: string;};
+  videoHref?: string;
+};
 export default function BlogCard({ post }: { post: BlogPost }) {
   return (
     <article className="flex w-full flex-col border border-[#efefef] bg-white lg:h-[895px] lg:w-[856px]">
       <div className="relative w-full">
         <div className="relative h-[240px] w-full sm:h-[360px] lg:h-[580px]">
-          <Image src={post.imageSrc} alt={post.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 856px" priority={false}/>
+          <Image src={post.imageSrc} alt={post.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 856px" priority={false} />
         </div>
         <div className="absolute bottom-[-15px] right-[14px] rounded-[2px] bg-[var(--accent)] px-[10px] py-[6px] text-[16px] font-semibold text-white">
           {post.date}
@@ -40,4 +41,5 @@ export default function BlogCard({ post }: { post: BlogPost }) {
           </Link>
         </div>
       </div>
-    </article>);}
+    </article>);
+}

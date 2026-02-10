@@ -29,7 +29,8 @@ function TestimonialCard({ item }: { item: Testimonial }) {
           <Image src={item.avatarSrc} alt={item.name} width={44} height={44} className="h-[44px] w-[44px] rounded-sm object-cover" />
         </div>
       </div>
-    </div>);}
+    </div>);
+}
 export default function TestimonialArea() {
   return (
     <section className="relative overflow-hidden bg-[#F5F5F5] bg-[url('/images/testimonial/feedback-bg.png')] bg-center bg-no-repeat pt-[120px] pb-[120px]" aria-label="Testimonials">
@@ -64,4 +65,5 @@ export default function TestimonialArea() {
         </div>
         <BrandArea />
       </div>
-    </section>);}
+    </section>);
+}

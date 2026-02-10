@@ -22,7 +22,8 @@ export default function BrandArea() {
         breakpoints={{
           0: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
-          1024: { slidesPerView: 5 },}}>
+          1024: { slidesPerView: 5 },
+        }}>
         {BRANDS.map((b, idx) => (
           <SwiperSlide key={`${b.src}-${idx}`}>
             <div className="flex h-[70px] items-center justify-center">
@@ -30,4 +31,5 @@ export default function BrandArea() {
             </div>
           </SwiperSlide>))}
       </Swiper>
-    </div>);}
+    </div>);
+}

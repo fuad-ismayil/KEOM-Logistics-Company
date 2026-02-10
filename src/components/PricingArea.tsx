@@ -7,7 +7,8 @@ import WavyText from "./WavyText";
 import { AnimatePresence, motion } from "framer-motion";
 type PricingItem = { title: string; price: string; leftBullets: string[]; rightBullets: string[]; };
 const ITEMS: PricingItem[] = [
-    {   title: "Road Freight",
+    {
+        title: "Road Freight",
         price: "$199",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -15,8 +16,10 @@ const ITEMS: PricingItem[] = [
             "Volume Limit: Up to 10 cubic meters",
             "Door-to-door delivery",
             "Basic insurance coverage",],
-        rightBullets: ["Online shipment tracking", "Customer support"],},
-    {   title: "Ship Freight",
+        rightBullets: ["Online shipment tracking", "Customer support"],
+    },
+    {
+        title: "Ship Freight",
         price: "$299",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -24,8 +27,10 @@ const ITEMS: PricingItem[] = [
             "Volume Limit: Up to 10 cubic meters",
             "Door-to-door delivery",
             "Basic insurance coverage",],
-        rightBullets: ["Online shipment tracking", "Customer support"],},
-    {   title: "Airplane Freight",
+        rightBullets: ["Online shipment tracking", "Customer support"],
+    },
+    {
+        title: "Airplane Freight",
         price: "$399",
         leftBullets: [
             "Cost: $500 per shipment",
@@ -33,7 +38,8 @@ const ITEMS: PricingItem[] = [
             "Volume Limit: Up to 10 cubic meters",
             "Door-to-door delivery",
             "Basic insurance coverage",],
-        rightBullets: ["Online shipment tracking", "Customer support"],},];
+        rightBullets: ["Online shipment tracking", "Customer support"],
+    },];
 function PlusCircle({ active }: { active: boolean }) {
     return (
         <span className={["grid h-[40px] w-[40px] place-items-center rounded-full", active ? "border border-[#ff7d44] bg-transparent" : "bg-[#c4d2d5]",].join(" ")} aria-hidden="true">
@@ -41,13 +47,15 @@ function PlusCircle({ active }: { active: boolean }) {
                 <span className={["absolute left-1/2 top-0 h-full w-[2px] -translate-x-1/2", active ? "bg-[#ff7d44]" : "bg-[#0a3b44]",].join(" ")} />
                 <span className={["absolute left-0 top-1/2 h-[2px] w-full -translate-y-1/2", active ? "bg-[#ff7d44]" : "bg-[#0a3b44]",].join(" ")} />
             </span>
-        </span>);}
+        </span>);
+}
 function CheckBullet({ text }: { text: string }) {
     return (
         <li className="flex items-start gap-[14px] text-[20px] leading-[28px] text-[#0a3b44]">
             <CiCircleCheck size={30} color="#ff7d44" className="text-[25px]" />
             <span>{text}</span>
-        </li>);}
+        </li>);
+}
 export default function PricingArea() {
     const uid = useId();
     const [openIndex, setOpenIndex] = useState<number>(1);
@@ -73,16 +81,16 @@ export default function PricingArea() {
                         return (
                             <div key={item.title}>
                                 <button id={buttonId} type="button" aria-expanded={isOpen} aria-controls={panelId} onClick={() => setOpenIndex((prev) => (prev === idx ? -1 : idx))} className="flex w-full items-center justify-between py-[26px] text-left">
-                                    <span className={["font-[800] text-[#0a3b44]",isOpen ? "text-[32px] leading-[1.05]" : "text-[28px] leading-[1.1]",].join(" ")}>
+                                    <span className={["font-[800] text-[#0a3b44]", isOpen ? "text-[32px] leading-[1.05]" : "text-[28px] leading-[1.1]",].join(" ")}>
                                         {item.title}
                                     </span>
                                     <PlusCircle active={isOpen} />
                                 </button>
                                 <div className={isOpen ? "h-[2px] bg-[#8aa6ae]" : "h-px bg-[#e9eff2]"} />
-                                <div id={panelId} role="region" aria-labelledby={buttonId} className={["grid transition-[grid-template-rows,opacity] duration-300 ease-out",isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",].join(" ")}>
+                                <div id={panelId} role="region" aria-labelledby={buttonId} className={["grid transition-[grid-template-rows,opacity] duration-300 ease-out", isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",].join(" ")}>
                                     <div className="overflow-hidden">
                                         <div className="pt-[26px] pb-[44px]">
-                                            <div className={["grid items-stretch gap-y-[28px]","lg:grid-cols-[408px_360px_1fr] lg:gap-x-[50px]",].join(" ")}>
+                                            <div className={["grid items-stretch gap-y-[28px]", "lg:grid-cols-[408px_360px_1fr] lg:gap-x-[50px]",].join(" ")}>
                                                 <div className="min-w-0">
                                                     <AnimatePresence mode="wait">
                                                         {isOpen && (
@@ -109,7 +117,9 @@ export default function PricingArea() {
                                         <div className="h-[2px] bg-[#8aa6ae]" />
                                     </div>
                                 </div>
-                            </div>);})}
+                            </div>);
+                    })}
                 </div>
             </div>
-        </section>);}
+        </section>);
+}

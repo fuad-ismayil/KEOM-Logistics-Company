@@ -42,4 +42,5 @@ export default function Introduction() {
           </div>
         </form>
       </div>
-    </section>);}
+    </section>);
+}

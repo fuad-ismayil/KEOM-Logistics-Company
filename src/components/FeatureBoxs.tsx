@@ -26,4 +26,5 @@ export default function FeatureSlider() {
                         </Link>
                     </SwiperSlide>))}
             </Swiper>
-        </div>);}
+        </div>);
+}

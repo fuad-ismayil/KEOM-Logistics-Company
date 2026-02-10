@@ -21,4 +21,5 @@ export default function GalleryCard({ item, onClick, priority = false }: Gallery
                     </figcaption>
                 </div>
             </figure>
-        </button>);}
+        </button>);
+}
