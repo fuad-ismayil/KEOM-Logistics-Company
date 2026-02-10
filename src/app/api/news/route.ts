@@ -1,4 +1,3 @@
-// src/app/api/news/route.ts
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
@@ -8,7 +7,7 @@ export async function GET(request: Request) {
   const searchQuery = searchParams.get('search');
   const apiKey = process.env.NEXT_PUBLIC_GNEWS_API_KEY;
   if (!apiKey) {
-    return NextResponse.json({ error: 'API Key tapılmadı' }, { status: 500 });
+    return NextResponse.json({ error: 'API Key not found' }, { status: 500 });
   }
   let url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&apikey=${apiKey}`;
   if (searchQuery) {
