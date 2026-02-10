@@ -94,7 +94,6 @@ export default function GetInTouch() {
                     className="w-full md:col-span-2 bg-white border border-gray-400 px-4 py-3.5 text-gray-600 placeholder-gray-400 resize-none focus:outline-none focus:border-[#eb7342] transition-colors"
                 ></textarea>
 
-                {/* Cloudflare Turnstile */}
                 <div className="md:col-span-2 flex justify-center mt-2">
                     <Turnstile
                         sitekey={TURNSTILE_SITE_KEY}
