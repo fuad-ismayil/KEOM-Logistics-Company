@@ -29,7 +29,7 @@ export default function Header() {
             <Link key={m.name} href={m.h!} className="hover:text-[#FF7D44] transition-colors">{m.name}</Link>)}
         </PopoverGroup>
       </div>
-      <Link href="/contact" className="hidden lg:flex text-[14px] bg-[#ff7d44] py-[17px] font-bold w-[12.5%] items-center justify-center text-white">
+      <Link href="/contact" className="hidden lg:flex text-[14px] bg-[#ff7d44] py-[17px] font-bold w-[12.5%] items-center justify-center text-white hover:bg-white hover:text-black transition-all duration-300">
         GET A QUOTE
       </Link>
       <button className="lg:hidden text-white text-[30px] z-[60]" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
