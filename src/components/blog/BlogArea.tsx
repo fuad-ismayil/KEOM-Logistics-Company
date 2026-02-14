@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
-import WavyText from "./WavyText";
+import WavyText from "@/components/ui/WavyText";
 const POSTS = [
   { image: "/images/blogarea/inner_b3.jpg", date: "24th March 2025", title: "Seas accumsan nulla nec lacus ultricies placerat.", category: "TRANSPORT, FREIGHT", href: "/blog-details" },
   { image: "/images/blogarea/inner_b2.jpg", date: "24th March 2025", title: "Dras accumsan nulla nec lacus ultricies placerat.", category: "TRANSPORT, FREIGHT", href: "/blog-details" },
@@ -22,8 +22,8 @@ export default function BlogArea() {
           <div className="flex items-start justify-between">
             <div>
               <h2 className="font-bold text-white leading-[1.2] text-center lg:text-start">
-                <span className="block text-[40px] lg:text-[60px] opacity-40"><WavyText text="Company"/></span>
-                <span className="block text-[40px] lg:text-[60px]"><WavyText text="news &amp; insights" delay={0.2}/></span>
+                <span className="block text-[40px] lg:text-[60px] opacity-40"><WavyText text="Company" /></span>
+                <span className="block text-[40px] lg:text-[60px]"><WavyText text="news &amp; insights" delay={0.2} /></span>
               </h2>
               <div className="mt-[22px] flex gap-[18px]">
                 <div className="text-[14px] font-bold uppercase text-[#FF7D44]">how it works</div>
@@ -46,7 +46,8 @@ export default function BlogArea() {
           breakpoints={{
             0: { slidesPerView: 1, spaceBetween: 22 },
             768: { slidesPerView: 2, spaceBetween: 28 },
-            1024: { slidesPerView: 3, spaceBetween: 30 },}}>
+            1024: { slidesPerView: 3, spaceBetween: 30 },
+          }}>
           {SLIDES.map((post, idx) => (
             <SwiperSlide key={`${post.title}-${idx}`}>
               <article className="mx-auto w-[336px] md:w-[318px] lg:w-[410px]">
@@ -66,4 +67,5 @@ export default function BlogArea() {
             </SwiperSlide>))}
         </Swiper>
       </div>
-    </section>);}
+    </section>);
+}

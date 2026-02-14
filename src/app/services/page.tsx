@@ -1,6 +1,6 @@
-import PageIntro from "@/components/PageIntro";
+import PageIntro from "@/components/sections/PageIntro";
 import ServicesArea from "@/components/services/ServicesArea";
-import TestimonialArea from "@/components/TestimonialArea";
+import TestimonialArea from "@/components/sections/TestimonialArea";
 export default function Services() {
     return (
         <>
@@ -10,4 +10,3 @@ export default function Services() {
         </>
     );
 }
-    

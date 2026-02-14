@@ -1,9 +1,9 @@
-import PageIntro from "@/components/PageIntro";
-import AboutArea from "@/components/AboutArea";
-import HowItWorks from "@/components/HowItWorks";
-import TestimonialArea from "@/components/TestimonialArea";
-import TeamArea from "@/components/TeamArea";
-import BookingArea from "@/components/BookingArea";
+import PageIntro from "@/components/sections/PageIntro";
+import AboutArea from "@/components/sections/AboutArea";
+import HowItWorks from "@/components/sections/HowItWorks";
+import TestimonialArea from "@/components/sections/TestimonialArea";
+import TeamArea from "@/components/sections/TeamArea";
+import BookingArea from "@/components/sections/BookingArea";
 export default function About() {
     return (
         <>

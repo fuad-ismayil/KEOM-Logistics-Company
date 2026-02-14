@@ -1,5 +1,5 @@
-import Booking from "./Booking";
-import WavyText from "./WavyText";
+import Booking from "@/components/sections/Booking";
+import WavyText from "@/components/ui/WavyText";
 export default function BookingArea() {
   return (
     <section id="booking" className="relative hidden lg:block overflow-hidden bg-[#F5F5F5] pb-[120px]">

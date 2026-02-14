@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FaPinterestP, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import WavyText from "./WavyText";
+import WavyText from "@/components/ui/WavyText";
 type TeamMember = { src: string; alt: string; role: string; name: string; href: string; socials: { pinterest?: string; instagram?: string; twitter?: string; facebook?: string; }; };
 const TEAM: TeamMember[] = [
     { src: "/images/teamarea/team-img1.jpg", alt: "Victoria L. Davis", role: "founder", name: "Victoria L. Davis", href: "/team-single", socials: { pinterest: "#", instagram: "#", twitter: "#", facebook: "#" }, },

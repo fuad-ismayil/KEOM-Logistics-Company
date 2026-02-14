@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import BlogCard, { type BlogPost } from "@/components/blog/BlogCard";
+import BlogCard, { type BlogPost } from "@/components/cards/BlogCard";
 import { FaXTwitter, FaPinterestP, FaFacebookF, FaInstagram, FaWordpress, FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import Link from "next/link";
 
@@ -31,7 +31,7 @@ export default function InnerBlog() {
       setLoading(true);
       try {
         let url = `/api/news?category=${category}`;
-        
+
         if (searchQuery) {
           url = `/api/news?search=${searchQuery}`;
         }

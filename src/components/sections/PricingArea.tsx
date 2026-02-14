@@ -3,7 +3,7 @@ import { useId, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CiCircleCheck } from "react-icons/ci";
-import WavyText from "./WavyText";
+import WavyText from "@/components/ui/WavyText";
 import { AnimatePresence, motion } from "framer-motion";
 type PricingItem = { title: string; price: string; leftBullets: string[]; rightBullets: string[]; };
 const ITEMS: PricingItem[] = [

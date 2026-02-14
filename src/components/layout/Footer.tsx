@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaChevronRight, FaPhoneAlt } from "react-icons/fa";
 import { TbMailFilled } from "react-icons/tb";
 import { IoIosPin } from "react-icons/io";
-import NewsletterArea from "./NewsletterArea";
+import NewsletterArea from "@/components/sections/NewsletterArea";
 const ACCENT = "#ff6c41";
 const TITLE_CLS = "mb-[30px] text-[14px] font-bold uppercase tracking-[0.08em] text-[#003b496e]";
 const COL_CLS = "mb-[30px] w-full sm:w-[48%]";

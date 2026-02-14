@@ -1,14 +1,14 @@
 "use client";
-import Introduction from "@/components/Introduction";
-import FreightServices from "@/components/FreightServices";
-import AboutArea from "@/components/AboutArea";
-import GalleryArea from "@/components/GalleryArea";
-import TestimonialArea from "@/components/TestimonialArea";
-import HowItWorks from "@/components/HowItWorks";
-import TeamArea from "@/components/TeamArea";
-import BookingArea from "@/components/BookingArea";
-import PricingArea from "@/components/PricingArea";
-import BlogArea from "@/components/BlogArea";
+import Introduction from "@/components/sections/Introduction";
+import FreightServices from "@/components/sections/FreightServices";
+import AboutArea from "@/components/sections/AboutArea";
+import GalleryArea from "@/components/sections/GalleryArea";
+import TestimonialArea from "@/components/sections/TestimonialArea";
+import HowItWorks from "@/components/sections/HowItWorks";
+import TeamArea from "@/components/sections/TeamArea";
+import BookingArea from "@/components/sections/BookingArea";
+import PricingArea from "@/components/sections/PricingArea";
+import BlogArea from "@/components/blog/BlogArea";
 export default function Home() {
   return (
     <>

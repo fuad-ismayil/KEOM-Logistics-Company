@@ -1,6 +1,6 @@
 "use client";
-import WavyText from "./WavyText";
-import ServiceCard from "./ServiceCard";
+import WavyText from "@/components/ui/WavyText";
+import ServiceCard from "@/components/cards/ServiceCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 type Service = { id: string; iconSrc: string; style: string; title: string; href: string; description: string; };

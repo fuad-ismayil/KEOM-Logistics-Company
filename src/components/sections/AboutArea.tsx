@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import WavyText from "./WavyText";
+import WavyText from "@/components/ui/WavyText";
 import { useEffect, useRef, useState } from "react";
 export default function AboutArea() {
   const mainImageRef = useRef<HTMLDivElement>(null);
@@ -14,24 +14,28 @@ export default function AboutArea() {
           if (entry.isIntersecting) {
             if (entry.target === mainImageRef.current) setMainImageVisible(true);
             if (entry.target === truckRef.current) setTruckVisible(true);
-            observer.unobserve(entry.target);}});}, { threshold: 0 });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0 });
     if (mainImageRef.current) observer.observe(mainImageRef.current);
     if (truckRef.current) observer.observe(truckRef.current);
-    return () => observer.disconnect();}, []);
+    return () => observer.disconnect();
+  }, []);
   return (
     <section className="relative overflow-hidden bg-[#F5F5F5] py-16 px-4 lg:py-[120px] lg:px-[7.8%]">
       <div className="mx-auto w-full">
         <div className="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
           <div className="relative flex justify-center lg:block">
             <div ref={mainImageRef} className={`relative overflow-hidden reveal-mask ${mainImageVisible ? "animate" : ""} w-[85vw] md:w-[87.5vw] lg:w-[500px] lg:h-[600px] max-w-[calc(100%-32px)] lg:max-w-none`}>
-              <Image src="/images/about/aboutarea/about_img_01.jpg" alt="Shipping" width={500} height={600} priority sizes="(min-width: 1024px) 500px, (min-width: 768px) 87.5vw, 85vw" className="block w-full h-auto lg:h-full object-cover"/>
+              <Image src="/images/about/aboutarea/about_img_01.jpg" alt="Shipping" width={500} height={600} priority sizes="(min-width: 1024px) 500px, (min-width: 768px) 87.5vw, 85vw" className="block w-full h-auto lg:h-full object-cover" />
               <a href="https://www.youtube.com/watch?v=gyGsPlt06bo" target="_blank" rel="noreferrer" className="absolute right-[10px] top-[15px] lg:right-[20px] lg:top-[30px]" aria-label="Play video">
-                <Image src="/images/about/aboutarea/play.png" alt="Play" width={220} height={220} className="object-contain w-[220px] h-[220px]" priority/>
+                <Image src="/images/about/aboutarea/play.png" alt="Play" width={220} height={220} className="object-contain w-[220px] h-[220px]" priority />
               </a>
             </div>
             <div className="absolute left-[-240px] bottom-[-30px] md:bottom-[200px] lg:left-[-250px] lg:bottom-[110px] max-w-[472px]">
               <div ref={truckRef} className={`reveal-mask ${truckVisible ? "animate" : ""}`}>
-                <Image src="/images/about/aboutarea/truck.png" alt="Truck" width={472} height={190} className="h-auto block" priority/>
+                <Image src="/images/about/aboutarea/truck.png" alt="Truck" width={472} height={190} className="h-auto block" priority />
               </div>
             </div>
           </div>
@@ -67,4 +71,5 @@ export default function AboutArea() {
           </div>
         </div>
       </div>
-    </section>);}
+    </section>);
+}

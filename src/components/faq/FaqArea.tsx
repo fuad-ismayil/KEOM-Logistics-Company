@@ -4,7 +4,7 @@ import { Slide } from "react-awesome-reveal";
 import Image from "next/image";
 import { useId, useRef, useEffect, useState } from "react";
 import { BsChevronLeft } from "react-icons/bs";
-import WavyText from "../WavyText";
+import WavyText from "@/components/ui/WavyText";
 type FaqItem = { question: string; answer: string; };
 const FAQ_ITEMS: FaqItem[] = [
   {

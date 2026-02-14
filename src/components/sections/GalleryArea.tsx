@@ -4,8 +4,8 @@ import { useMemo, useState, useEffect, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import WavyText from "./WavyText";
-import GalleryCard, { GalleryItem } from "./GalleryCard";
+import WavyText from "@/components/ui/WavyText";
+import GalleryCard, { GalleryItem } from "@/components/cards/GalleryCard";
 import { BiSolidLeftArrow, BiSolidRightArrow } from "react-icons/bi";
 const DEFAULT_ITEMS: GalleryItem[] = [
     { imageSrc: "/images/gallery/gallery-01.jpg", iconSrc: "/images/gallery/aol.png", tag: "transport", title: "Aoliox office thing transport", },

@@ -1,4 +1,4 @@
-import PageIntro from "@/components/PageIntro";
+import PageIntro from "@/components/sections/PageIntro";
 import ContactArea from "@/components/contact/ContactArea";
 export default function Contact() {
     return (

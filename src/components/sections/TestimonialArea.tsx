@@ -1,12 +1,12 @@
 "use client";
-import BrandArea from "./BrandArea";
+import BrandArea from "@/components/sections/BrandArea";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import WavyText from "./WavyText";
+import WavyText from "@/components/ui/WavyText";
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Swiper as SwiperType } from "swiper";
-import TestimonialCard, { type Testimonial } from "./TestimonialCard";
+import TestimonialCard, { type Testimonial } from "@/components/cards/TestimonialCard";
 const TESTIMONIALS: Testimonial[] = [
   { text: "“ I have been using them for a year now. Everything is detailed & well organized and, of course, damn beautiful. ”", name: "Eliana M. Thompson", avatarSrc: "/images/testimonial/testi_avatar.png" },
   { text: "“ I have been using them for a year now. Everything is detailed & well organized and, of course, damn beautiful. ”", name: "Penelope N. Harris", avatarSrc: "/images/testimonial/testi_avatar_02.png" },
@@ -24,10 +24,12 @@ export default function TestimonialArea() {
   useEffect(() => {
     if (!sectionRef.current) return;
     let timeoutId: number | null = null;
-    const ob = new IntersectionObserver((entries) => {for (const e of entries) {if (e.isIntersecting && !triggered) {timeoutId = window.setTimeout(() => {setInView(true);setTriggered(true);ob.disconnect();}, 500);break;}}},{ threshold: 0.15 });ob.observe(sectionRef.current);
-    return () => {ob.disconnect(); if (timeoutId) clearTimeout(timeoutId);};}, [triggered]);
+    const ob = new IntersectionObserver((entries) => { for (const e of entries) { if (e.isIntersecting && !triggered) { timeoutId = window.setTimeout(() => { setInView(true); setTriggered(true); ob.disconnect(); }, 500); break; } } }, { threshold: 0.15 }); ob.observe(sectionRef.current);
+    return () => { ob.disconnect(); if (timeoutId) clearTimeout(timeoutId); };
+  }, [triggered]);
 
-  useEffect(() => {if (!inView || playedOnce || !swiperRef.current) return;
+  useEffect(() => {
+    if (!inView || playedOnce || !swiperRef.current) return;
     const swiper = swiperRef.current;
     swiper.update();
     const spv =
@@ -42,14 +44,15 @@ export default function TestimonialArea() {
       if (!el) continue;
       const real = el.getAttribute("data-swiper-slide-index");
       const realIdx = real ? Number(real) : i;
-      if (!Number.isNaN(realIdx)) visible.add(realIdx);}
+      if (!Number.isNaN(realIdx)) visible.add(realIdx);
+    }
     setAnimateIdxs([...visible]);
     setPlayedOnce(true);
     window.setTimeout(() => setAnimateIdxs([]), 750);
     window.requestAnimationFrame(() => setReady(true));
   }, [inView, playedOnce]);
   return (
-    <section ref={(el) => {sectionRef.current = el;}} className="relative overflow-hidden bg-[#F5F5F5] bg-[url('/images/testimonial/feedback-bg.png')] bg-center bg-no-repeat pt-[120px] pb-[120px]" aria-label="Testimonials">
+    <section ref={(el) => { sectionRef.current = el; }} className="relative overflow-hidden bg-[#F5F5F5] bg-[url('/images/testimonial/feedback-bg.png')] bg-center bg-no-repeat pt-[120px] pb-[120px]" aria-label="Testimonials">
       <div className="container relative z-[1] mx-auto px-4">
         <div className="mb-[80px] text-center lg:text-start lg:px-[7%]">
           <h2 className="leading-[1.2]">
@@ -75,7 +78,7 @@ export default function TestimonialArea() {
             spaceBetween={30}
             breakpoints={{ 0: { slidesPerView: 1 }, 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } }}
             className="px-[15px]"
-            onSwiper={(swiper) => {swiperRef.current = swiper;}}>
+            onSwiper={(swiper) => { swiperRef.current = swiper; }}>
             {TESTIMONIALS.map((t, idx) => (
               <SwiperSlide key={`${t.name}-${idx}`} className="h-auto">
                 <TestimonialCard item={t} shouldAnimate={animateSet.has(idx)} />
@@ -84,4 +87,5 @@ export default function TestimonialArea() {
         </div>
         <BrandArea />
       </div>
-    </section>);}
+    </section>);
+}

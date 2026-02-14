@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import WavyText from "./WavyText";
+import WavyText from "@/components/ui/WavyText";
 type HowItWorkItem = { step: string; iconSrc: string; title: string; description: string; };
 const DEFAULT_ITEMS: HowItWorkItem[] = [
     { step: "step 01", iconSrc: "/images/howitworks/how-icon-1.png", title: "The Paperwork", description: "Our expertise ensures efficient and seamless operations, tailored to meet your specific needs & drive your business forward.", },

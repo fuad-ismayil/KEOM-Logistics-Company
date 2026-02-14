@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
-import UnderConstruction from "@/components/UnderConstruction";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import UnderConstruction from "@/components/ui/UnderConstruction";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 // List of paths that should show the "Under Construction" page
 const UNDER_CONSTRUCTION_PATHS = [

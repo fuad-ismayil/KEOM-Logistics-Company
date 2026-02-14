@@ -1,4 +1,4 @@
-import PageIntro from "@/components/PageIntro";
+import PageIntro from "@/components/sections/PageIntro";
 import PricingArea from "@/components/pricing/PricingArea";
 export default function Pricing() {
     return (

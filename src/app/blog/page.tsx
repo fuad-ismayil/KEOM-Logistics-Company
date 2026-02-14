@@ -1,4 +1,4 @@
-import PageIntro from "@/components/PageIntro";
+import PageIntro from "@/components/sections/PageIntro";
 import InnerBlog from "@/components/blog/InnerBlog";
 export default function Blog() {
     return (
